@@ -1,0 +1,10 @@
+torch
+transformers
+accelerate
+sounddevice
+numpy
+pynput
+pyperclip
+pyautogui
+PyQt6
+rumps
