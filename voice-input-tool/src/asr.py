@@ -1,1 +1,1 @@
-# asr.py - ASR 推論模組
+# asr.py - ASR inference module

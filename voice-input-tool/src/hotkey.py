@@ -1,1 +1,1 @@
-# hotkey.py - 快捷鍵監聽
+# hotkey.py - Hotkey listener

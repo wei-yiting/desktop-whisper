@@ -1,1 +1,1 @@
-# ui.py - UI 浮動視窗
+# ui.py - Floating UI window

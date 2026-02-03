@@ -1,1 +1,1 @@
-# output.py - 文字輸出（貼上）
+# output.py - Text output (paste)

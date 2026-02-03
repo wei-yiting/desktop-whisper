@@ -1,1 +1,1 @@
-# recorder.py - 錄音模組
+# recorder.py - Audio recording module
