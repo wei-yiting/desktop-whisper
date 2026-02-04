@@ -1,0 +1,30 @@
+[project]
+name = "voice-input-tool"
+version = "0.1.0"
+description = "Desktop voice input tool with ASR-powered speech-to-text"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "accelerate",
+    "qwen-asr",
+    "sounddevice",
+    "numpy",
+    "pynput",
+    "pyperclip",
+    "pyautogui",
+    "PyQt6",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.uv]
+# Override transitive dependencies to fix Python 3.10+ compatibility
+override-dependencies = [
+    "librosa>=0.10.2",
+    "numba>=0.59.0",
+    "llvmlite>=0.42.0",
+]
