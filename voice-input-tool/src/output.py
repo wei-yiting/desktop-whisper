@@ -9,6 +9,7 @@ import time
 
 import pyautogui
 import pyperclip
+import zhconv
 
 
 def paste_text(text: str) -> None:
@@ -27,6 +28,9 @@ def paste_text(text: str) -> None:
         to your terminal app or Python interpreter in:
         System Preferences > Security & Privacy > Privacy > Accessibility
     """
+    # Convert to Traditional Chinese before pasting
+    text = zhconv.convert(text, "zh-tw")
+
     # Copy text to clipboard
     pyperclip.copy(text)
 
