@@ -151,8 +151,8 @@ app = BUNDLE(
             '語音輸入需要使用麥克風來錄製語音。',
         'NSAppleEventsUsageDescription':
             '語音輸入需要控制其他應用程式來貼上文字。',
-        # Menu-bar-only app (no Dock icon)
-        'LSUIElement': True,
+        # False = show in Dock; True = menu-bar only (no Dock icon)
+        'LSUIElement': False,
         'NSHighResolutionCapable': True,
     },
 )
