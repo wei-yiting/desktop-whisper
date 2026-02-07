@@ -122,7 +122,7 @@ desktop-whisper/
 1. **Clone 此 repo**
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/wei-yiting/desktop-whisper.git
    cd desktop-whisper/voice-input-tool
    ```
 
