@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Entitlements for VoiceInput.app code signing.
+
+  Usage with codesign:
+    codesign ‑‑sign "Developer ID Application: ..." \
+             ‑‑entitlements scripts/entitlements.plist \
+             dist/VoiceInput.app
+-->
+<plist version="1.0">
+<dict>
+    <!-- Microphone access for voice recording -->
+    <key>com.apple.security.device.audio-input</key>
+    <true/>
+
+    <!-- Apple Events for simulating keyboard paste (Cmd+V) -->
+    <key>com.apple.security.automation.apple-events</key>
+    <true/>
+</dict>
+</plist>

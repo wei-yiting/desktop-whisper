@@ -238,10 +238,19 @@ class VoiceInputApp(QObject):
 
 def main() -> None:
     """Entry point for the voice input tool."""
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    )
+    log_fmt = "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+
+    if getattr(sys, "frozen", False):
+        # Running as a PyInstaller .app — log to ~/Library/Logs/VoiceInput/
+        log_dir = os.path.expanduser("~/Library/Logs/VoiceInput")
+        os.makedirs(log_dir, exist_ok=True)
+        logging.basicConfig(
+            level=logging.INFO,
+            format=log_fmt,
+            handlers=[logging.FileHandler(os.path.join(log_dir, "voiceinput.log"))],
+        )
+    else:
+        logging.basicConfig(level=logging.INFO, format=log_fmt)
 
     # QApplication must live on the main thread
     qt_app = QApplication(sys.argv)
