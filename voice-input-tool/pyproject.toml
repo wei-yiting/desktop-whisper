@@ -20,6 +20,10 @@ dependencies = [
 dev = [
     "pytest",
 ]
+build = [
+    "pyinstaller>=6.0",
+    "pyinstaller-hooks-contrib",
+]
 
 [tool.uv]
 # Override transitive dependencies to fix Python 3.10+ compatibility
